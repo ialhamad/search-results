@@ -19,18 +19,20 @@ export const SearchFacets = props => (
                 ) : (
                   <ul className="rlist facet__list">
                     <li>
-                        <button
-                          className="btn-link"
-                          onClick={() => props.changeFacet("")}
-                        >
-                          <span className="facet__label">All</span>
-                        </button>
-                      </li>
+                      <button
+                        className="btn-link"
+                        onClick={() => props.changeFacet("")}
+                      >
+                        <span className="facet__label">All</span>
+                      </button>
+                    </li>
                     {data.map(facetItem => (
                       <li>
                         <button
                           className="btn-link"
-                          onClick={() => props.changeFacet(facetItem.collection)}
+                          onClick={() =>
+                            props.changeFacet(facetItem.collection)
+                          }
                         >
                           <span className="facet__label">{facetItem.name}</span>
                         </button>
